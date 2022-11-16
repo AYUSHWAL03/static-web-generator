@@ -1,0 +1,70 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(37, 40, 44, 0.3);
+    border-bottom: 1px solid white;
+  }
+  
+  li {
+    float: right;
+    height: 100%;
+  }
+  html{
+    font-size: 62.5%;
+  }
+  body{
+    margin: 0%;
+    padding: 0%;
+    box-shadow: none;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    transition: all 1s;
+    font-size: 1.5rem;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+    /* text-decoration: underline; */
+  }
+
+  ul li:nth-child(1){
+    margin-right: 3%;
+  }
+.effect::after{
+  content: "";
+  height: 0.2rem;
+  position: relative;
+  top: 0.3 rem;
+  width: 0%;
+  background-color: white;
+  display: block;
+  transition: 0.5s ease-in-out;
+}
+.effect:hover::after{
+  content: "";
+  height: 0.1rem;
+  width: 100%;
+  background-color: white;
+  display: block;
+  
+}
+
+.effect1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 7rem;
+    height: 7rem;
+    margin: 0%;
+    background-image: url('logo.png');
+    
+    background-size: cover;
+}

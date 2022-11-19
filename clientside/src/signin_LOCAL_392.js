@@ -1,11 +1,10 @@
-// <<<<<<< HEAD
 import React from 'react';
 import { useRef, useState, useEffect } from "react";
 // import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import "./styles/login.css";
 
-const Signin = () =>{
+const SignIn = () =>{
     const userRef = useRef();
     const errRef = useRef();
 
@@ -70,7 +69,4 @@ const Signin = () =>{
 
 }
 
-export default Signin;
-
-
-// >>>>>>> d36973480f42e3763975247f88b5180eb2cdab51
+export default SignIn;

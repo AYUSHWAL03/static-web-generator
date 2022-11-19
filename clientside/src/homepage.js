@@ -5,7 +5,11 @@ import MainContent from './mainContent';
 import Login from './login';
 import UploadImage from './uploadimage';
 import UploadDescription from './uploadDescription';
+<<<<<<< HEAD
 import SignIn from './signIn';
+=======
+import Signin from './signin';
+>>>>>>> d36973480f42e3763975247f88b5180eb2cdab51
 
 
 const HomePage = () =>{
@@ -22,6 +26,7 @@ const HomePage = () =>{
 
                 <Route path='/uploadimage' element={<UploadImage/>}/>
                 <Route path='/uploaddescription' element={<UploadDescription/>}/>
+                <Route path='/signin' element={<Signin/>}/>
             </Routes>
         </div>
     )

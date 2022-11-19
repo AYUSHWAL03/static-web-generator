@@ -4,6 +4,7 @@ import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./styles/login.css";
+import { Link } from 'react-router-dom';
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
@@ -17,7 +18,7 @@ const Login = () =>{
 
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
-    const [userFocus, setUserFocus] = useState(false);
+    const [userFocus,   setUserFocus] = useState(false);
 
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
@@ -131,7 +132,7 @@ const Login = () =>{
                     Already registered?<br />
                     <span className="line">
                         {/*put router link here*/}
-                        <a href="/signIn">Sign In</a>
+                        <Link to="/signIn">Sign In</Link>
                     </span>
                 </p>
             </section>

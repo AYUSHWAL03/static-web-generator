@@ -1,7 +1,9 @@
 import React from 'react';
 import { useRef, useState, useEffect } from "react";
+import { Route} from 'react-router-dom';
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import SignIn from './signIn';
 
 import "./styles/login.css";
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -131,7 +133,12 @@ const Login = () =>{
                     Already registered?<br />
                     <span className="line">
                         {/*put router link here*/}
-                        <a href="/signIn">Sign In</a>
+                        <a href="signIn.js">Sign In</a>
+                        {/* <Route path='/signIn' element={<Login/>}/> */}
+                       {/* <Route exact path='/signIn'>
+                        <SignIn/>
+
+                       </Route> */}
                     </span>
                 </p>
             </section>

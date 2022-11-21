@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./styles/login.css";
 import { Link } from 'react-router-dom';
+
+import axios from 'axios';
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
@@ -29,7 +31,8 @@ const Login = () =>{
     const [matchFocus, setMatchFocus] = useState(false);
 
     const [errMsg, setErrMsg] = useState('');
-    // const [success, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false);
+
 
     useEffect(() => {
         userRef.current.focus();
@@ -47,10 +50,42 @@ const Login = () =>{
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd, matchPwd])
+
+    const submitInfo = (event) =>{
+        event.preventDefault();
+        const registered = {
+            user : user,
+            pwd : pwd
+        }
+        axios.post('http://localhost:3001/app/login',registered).then(res =>{
+            console.log(res.data.userName );
+        })
+        setUser('')
+        setPwd('')
+        setSuccess(true)
+        fetch_username()
+    }
+
+    const fetch_username = () =>{
+        axios.get('http://localhost:3001/app/login').then((res)=>{
+            user = res.data.userName;
+        }).catch(()=>{
+            console.log("Insert the username properly");
+        })
+    }
     return(
         
-        <>
-      
+        <>{success ? (
+
+            <section>
+                <h2>Your account created successfully</h2>
+                <p>This is your account name </p>
+                <br/>
+                <br/>
+                <Link to="/">Go to Home </Link>
+            </section>
+        ):(
+
             <section>
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                 <h1>Register</h1>
@@ -136,7 +171,7 @@ const Login = () =>{
                     </span>
                 </p>
             </section>
-       
+       )}
     </>
     )
 }

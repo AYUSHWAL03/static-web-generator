@@ -3,8 +3,8 @@ const router = express.Router()
 const signupTempcopy = require('../models/signupmodel');
 router.post('/login',(req,res)=>{
     const signupUser = new signupTempcopy({
-        userName : req.body.userName,
-        password : req.body.password
+        userName : req.body.user,
+        Password : req.body.pwd
     })
     signupUser.save().then(data =>{
         res.json(data);

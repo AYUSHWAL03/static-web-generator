@@ -3,9 +3,10 @@ const mongoose = require('mongoose')
 const signupTemplate = new mongoose.Schema({
     userName : {
         type : String,
-        required : true
+        required : true,
+        unique : true
     },
-    password:{
+    Password:{
         type : String,
         required : true
     },

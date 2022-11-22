@@ -1,0 +1,84 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-shadow: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    display: inline-block;
+
+  }
+  .submitbtn{
+    width: 130px;
+    height: 45px;
+    background-color: #e3e3e3;
+    border: #e3e3e3 1px solid;
+    color: black;
+    border-radius: 20px;
+    position: absolute;
+    top: 87%;
+    left: 61%;
+}
+.submit-hi{
+    cursor: pointer;
+    background-color: #e3e3e3;
+    border: #e3e3e3 1px solid;
+    position: relative;
+    top: 7px;
+    left: 25px;
+    font-size: 14pt;
+}
+.submit-svg{
+    position: relative;
+    top: 11px;
+    left: 30px;
+}
+  .upload{
+    position: absolute;
+    top: 52%;
+    left: 46%;
+    z-index: 1;
+  }
+  .custom-file-input::before {
+    content: 'Upload Images';
+    display: inline-block;
+    width: 129px;
+    height: 71px;
+    font-size: 14pt;
+    border-radius: 3px;
+    padding: 220px 322px;
+    outline: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    cursor: pointer;
+    background-color: rgb(166, 218, 244);
+    font-weight: 700;
+    border: dashed 1px black;
+    font-size: 18pt;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    
+  }
+
+  .imageInfo{
+    position: absolute;
+    top: 25%;
+    left: 71%;
+  }
+  .status{
+    display: flex;
+  }
+  .status-server{
+    position: relative;
+    left: 10px;
+    padding-left: 20px;
+    width: 100px;
+    height: 25px;
+    /* background-color: antiquewhite; */
+  }

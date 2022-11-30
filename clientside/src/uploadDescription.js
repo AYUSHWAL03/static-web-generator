@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './styles/uploadDescription.css'
 import {HiArrowCircleRight} from "react-icons/hi"
 import axios from 'axios';
 const UploadDescription = () =>{
     const [components,setComponents] = useState()
     const [description,setDescription] = useState()
+    const [data,setData] = useState()
     const handleSubmit = (event) =>{
         event.preventDefault();
         const uploadDescription = {
@@ -15,6 +16,17 @@ const UploadDescription = () =>{
             (res) =>{res.json(uploadDescription)}
         )
     }
+    useEffect(() =>{
+        fetch("/uploaddescription").then(
+            res => res.text()
+        ).then(
+            data => {
+                setData(data)
+                console.log(data)
+                // setSuccess(true)
+            }
+        )
+    }, [])
     return(
         <>
         <div className = "uploadDescription">

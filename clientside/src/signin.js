@@ -1,7 +1,9 @@
+import axios from 'axios';
 import React from 'react';
 import { useRef, useState, useEffect } from "react";
 // import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import Login from './login';
 import "./styles/login.css";
 
 const Signin = () =>{
@@ -19,6 +21,33 @@ const Signin = () =>{
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd])
+
+    axios.get("/signin",(req,res)=>
+    {
+      res.render("signin")
+    })
+
+    axios.post('http://localhost:3001/app/signin', async (req,res)=>{
+        try{
+            const name = req.body.username;
+            const Password = req.body.password;
+         //    console.log(userName,Password)
+     
+         const userName= await Login.findOne({user:name})
+
+        if(userName.password === Password)
+        {
+            res.status(201).render("homepage");
+        }
+        else{
+            res.send("Please Enter valid username and password")
+        }
+     
+        }
+        catch(error){
+            res.status(404).send("Please Enter valid username and password")
+        }
+     })
 
     return(
 

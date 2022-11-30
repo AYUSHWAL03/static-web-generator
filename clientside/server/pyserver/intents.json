@@ -1,0 +1,8 @@
+{
+    "intent": [
+        {"tag":"header",
+        "request":["create header","put header","make header","add header","type header","insert header"],
+        "response":"active"
+    }
+    ]
+}

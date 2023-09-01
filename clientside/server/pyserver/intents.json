@@ -2,37 +2,37 @@
 
 
     "_comment":" // navbar, footer,bgcolor, main content",
-    "intent": [
+    "intents": [
         {"tag":"header",
-        "request":["create header","put header","make header","add header","type header","insert header"], 
+        "requests":["create header","put header","make header","add header","type header","insert header"], 
         "response":"active-header"
         },
         {
             "tag":"navbar",
-            "request":["create navbar","insert navbar","make navbar","add navbar", "create left navbar","create right navbar","create top navbar","make left navbar",
+            "requests":["create navbar","insert navbar","make navbar","add navbar", "create left navbar","create right navbar","create top navbar","make left navbar",
                        "make right navbar","make top navbar"],
             "response":"active-navbar"
         },
         {
             "tag":"footer",
-            "request":["create footer","insert footer","make footer","add footer","bottom footer"],
+            "requests":["create footer","insert footer","make footer","add footer","bottom footer"],
             "response":"active-footer"
         },
         {
             "tag":"background color",
-            "request":["create background color","insert background color","make background color","add background color","apply background color","background color red",
+            "requests":["create background color","insert background color","make background color","add background color","apply background color","background color red",
                         "background color blue","background color light blue","background color light pink","background color green","background color black"],
             "response":"active-backgroundcolor"
         },
         {
             "tag":"main content",
-            "request":["create main content","insert main content","make main content","add main content","main content","middle main content","center content","left content",
+            "requests":["create main content","insert main content","make main content","add main content","main content","middle main content","center content","left content",
                       "right content","top content","bottom content"],
             "response":"active-maincontent"
         },
         {
             "tag":"image",
-            "request":["insert image","add image","image","insert image at middle","insert image at top","insert image at bottom","insert image at right","insert image at left"
+            "requests":["insert image","add image","image","insert image at middle","insert image at top","insert image at bottom","insert image at right","insert image at left"
                        ],
             "response":"active-image"
         }

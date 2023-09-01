@@ -6,14 +6,14 @@
 .heading{
     font-size: 1.2rem;
     position: absolute;
-    top: 20%;
+    top: 17%;
     left: 40%;
 }
 .steps{
     position: absolute;
-    top: 254px;
+    top: 204px;
     width: 700px;
-    height: 400px;
+    height: 550px;
     left: 500px;
     border: white solid 1px;
     background-color: rgb(111, 115, 119,0.7);
@@ -26,6 +26,16 @@
     border-bottom: white solid 1px;
     font-weight: bold;
 }
+.head-steps-two{
+    position: relative;
+    padding: 30px 180px;
+    padding-top: 18px;
+    margin-top: 45px;
+    font-size: 1.5rem;
+    border-bottom: white solid 1px;
+    border-top: white solid 1px;
+    font-weight: bold;
+}
 .steps p{
    position: relative;
    top: 15px;
@@ -34,6 +44,18 @@
 .gotoSection{
     position: relative;
     top: 30px;
+    left: 470px;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: rgb(66, 67, 67);
+    padding: 0.4rem 0.4rem;
+    border-radius: 15px;
+    
+}
+.gotoSectiontwo{
+    position: relative;
+    top: 10px;
     left: 470px;
     width: 3rem;
     height: 3rem;

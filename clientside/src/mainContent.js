@@ -10,7 +10,7 @@ const MainContent = () =>{
             </div>
             <div className='steps'>
                 <div className='head-steps'>
-                How to Create Your Own Website
+                How to Create Your Own Website images
                 </div>
             
                 <p className='imageupload'>
@@ -27,7 +27,28 @@ const MainContent = () =>{
                 <br/>
                 </p>
                 <Link to="/uploadimage" className='gotoSection'>Go to the section<MdPlayArrow className='selected-svg'/></Link>
-                
+                <br/>
+                <div className='head-steps-two'>
+                How to Create Your Own Website by giving description
+                </div>
+                <br/>
+                <p className='adddescription'>
+                Step 1: Include a description of the layout of your website.
+                </p>
+                <br/>
+                <p className='adddescription'>
+                    Step 2: Click on next after adding your description.
+                </p>
+                <br/>
+                <p className="adddescription">
+                    Step 3: Your code will be produced automatically after you click "next."
+                </p>
+                <br/>
+                <p className="adddescription">
+                Step 4: At this point, you can paste your code into any browser.
+                </p>
+                <br/>
+                <Link to="/uploaddescription" className='gotoSectiontwo'>Go to the section<MdPlayArrow className='selected-svg'/></Link>
             </div>
         </>
     )

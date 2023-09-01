@@ -12,7 +12,7 @@
 }
 .uploadDescription-header:nth-child(1){
     position: absolute;
-    top: 21rem;
+    top: 10rem;
     left: 30rem;
     font-size: 1.2rem;
     display: flex;
@@ -22,7 +22,7 @@
     height: 20vh;
     padding: 10px 10px;
     position: absolute;
-    top: 24rem;
+    top: 13rem;
     left: 27rem;
     font-size: 1.4rem;
     resize: none;
@@ -45,6 +45,29 @@
     color: black;
     border-radius: 20px;
     position: absolute;
-    top: 37rem;
+    top: 26rem;
     left: 90rem;
+}
+.submit-hi{
+    top: -3px;
+    padding: 0;
+}
+.submit-svg{
+    top: 0px;
+}
+.output1{
+    position: absolute;
+    top: 60%;
+    left: 27rem;
+    width: 60%;
+    opacity: 0.6;
+    resize: vertical;
+}
+.output{
+    position: absolute;
+    top: 60%;
+    left: 27rem;
+    width: 60%;
+    opacity: 1;
+    resize: vertical;
 }
